@@ -1,0 +1,22 @@
+# For cron
+systemctl status cron
+systemctl restart cron
+sudo apt install gedit
+sudo gedit ~/task.sh
+
+
+# task.sh
+#!/bin/bash
+echo "Hi From Hayden (Started)" >> ~/output.txt
+
+chmod +x ~/task.sh
+sudo chmod +x ~/task.sh
+crontab -e
+
+Add this line in crontab (to run every minute):
+* * * * * ~/task.sh
+
+watch ls
+ls
+cat output.txt
+watch cat output.txt
